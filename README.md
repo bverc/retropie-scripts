@@ -15,6 +15,29 @@ Download the scripts:
 - **volume up.sh** Increase volume by 10%
 - **volume down.sh** Decrease volume by 10%
 
-Use these scripts directly from bash, or you may symlink them into retropiemenu folder so they are accessable from the Emulation Station menus
+## Usage
+
+### 1. Run from bash
+
+    cd scripts
+    bash toogle mute.sh
+
+### 2. Symlink into RetroPie Menu
+
+Symlink scripts into retropiemenu folder so they are accessable from the Emulation Station menus
 
     ln -s safe\ shutdown.sh ~/RetroPie/retropiemenu
+    
+### 3. Run script from GPIO
+
+Run a python script to run a script on GPIO button press. And example python script has been provided in `gpio-script.py`.
+
+To run at boot, add to crontab.
+
+    crontab -e
+    
+At the bottom of the file, add the line:
+
+    @reboot python /home/pi/scripts/gpio-script.py
+
+reboot
