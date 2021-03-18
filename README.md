@@ -5,7 +5,7 @@ Useful bash scripts for use on RetroPie systems
 Download the scripts:
 
     cd ~
-    git clone https://github.com/bverc/retropie-status-overlay scripts
+    git clone https://github.com/bverc/retropie-scripts scripts
 
 - **restart emulationstation.sh** Restart Emulation Station
 - **safe shutdown.sh** Perform safe shutdown of the system
