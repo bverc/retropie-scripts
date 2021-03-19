@@ -20,7 +20,7 @@ Download the scripts:
 ### 1. Run from bash
 
     cd scripts
-    bash toggle mute.sh
+    bash toggle\ mute.sh
 
 ### 2. Symlink into RetroPie Menu
 
