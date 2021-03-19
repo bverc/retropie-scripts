@@ -20,13 +20,13 @@ Download the scripts:
 ### 1. Run from bash
 
     cd scripts
-    bash toogle mute.sh
+    bash toggle mute.sh
 
 ### 2. Symlink into RetroPie Menu
 
 Symlink scripts into retropiemenu folder so they are accessable from the Emulation Station menus
 
-    ln -s safe\ shutdown.sh ~/RetroPie/retropiemenu
+    ln -s ~/scripts/toggle\ mute.sh ~/RetroPie/retropiemenu/
     
 ### 3. Run script from GPIO
 
