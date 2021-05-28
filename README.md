@@ -28,7 +28,33 @@ Symlink scripts into retropiemenu folder so they are accessable from the Emulati
 
     ln -s ~/scripts/toggle\ mute.sh ~/RetroPie/retropiemenu/
     
-### 3. Run script from GPIO
+### 3. Create new System for scripts
+
+Create a new system in Emulation Station so all scripts appear in their own group.
+
+Copy default es_systems.cfg and edit to ensure it is not replaced during upgrade
+
+    sudo cp /etc/emulationstation/es_systems.cfg /opt/retropie/configs/all/emulationstation/es_systems.cfg
+    sudo vi /opt/retropie/configs/all/emulationstation/es_systems.cfg
+    
+Add the following system entry:
+```xml
+  <system>
+    <name>scripts</name>
+    <fullname>Scripts</fullname>
+    <path>/home/pi/scripts</path>
+    <extension>.sh</extension>
+    <command>bash %ROM%</command>
+    <platform/>
+    <theme>scripts</theme>
+  </system>
+```
+
+restart emulationstation or reboot
+    
+If you wish, you can [create a theme for the new system](https://retropie.org.uk/docs/Add-a-New-System-in-EmulationStation/#step-2-create-a-theme-for-the-new-system) 
+    
+### 4. Run script from GPIO
 
 Run a python script to run a bash script on GPIO button press. Some examples are provided:
 
